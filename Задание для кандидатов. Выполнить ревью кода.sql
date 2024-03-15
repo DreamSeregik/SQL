@@ -9,7 +9,7 @@ begin
 -- Проверка на корректность загрузки
 	if not exists (
 	select 1
-	from syn.ImportFile as f
+	from syn.ImportFile as f //неверный алиас
 	where f.ID = @ID_Record
 		and f.FlagLoaded = cast(1 as bit)
 	)
